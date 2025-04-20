@@ -43,3 +43,80 @@ Walmart
   <script src="script.js"></script>
 </body>
 </html>
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+
+header {
+  background-color: #0071ce;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2em;
+  text-align: center;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 300px;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #0071ce;
+  color: white;
+  border: none;
+  padding: 0.7em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+function pagar(producto) {
+  let url = "";
+
+  if (producto === 'sartenes') {
+    url = "https://www.paypal.com/pay?product=sartenes";
+  } else if (producto === 'articulos') {
+    url = "https://www.paypal.com/pay?product=articulos";
+  }
+
+  window.open(url, '_blank');
+}
